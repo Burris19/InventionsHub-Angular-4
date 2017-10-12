@@ -14,6 +14,6 @@ import { InventionsComponent } from './inventions/inventions.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, InventionsComponent]
 })
 export class AppModule { }

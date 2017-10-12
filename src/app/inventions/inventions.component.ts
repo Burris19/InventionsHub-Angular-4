@@ -7,7 +7,7 @@ export class Invention {
 }
 
 @Component({
-    selector: 'app-inventions',
+    selector: 'app-root',
     templateUrl: './inventions.component.html',
     styleUrls: ['./inventions.component.css']
 })

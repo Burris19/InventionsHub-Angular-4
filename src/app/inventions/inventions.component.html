@@ -1,25 +1,23 @@
 <li *ngFor="let i of inventions">
-    <span> <b> Name: </b>  {{ i.name }}  || </span>
-    <span>  <b> Inventor: </b>  {{ i.inventor }}  || </span>
-    <span>  <b> Year: </b> {{ i.year }}  </span>
+    <div class="invention">
+        <span> <b> Name: </b>  {{ i.name }}  || </span>
+        <span>  <b> Inventor: </b>  {{ i.inventor }}  || </span>
+        <span>  <b> Year: </b> {{ i.year }}  </span>
+    </div>
 </li>
-
 <hr>
-
-
-<label> {{ nameModel }} </label>
-<div>
-    <input [(ngModel)]="nameModel" placeholder="enter name">
+<div class="invention-creator">
+    <div>
+        <input [(ngModel)]="nameModel" placeholder="enter name" class="form-control">
+    </div>
+    <hr>    
+    <div>
+        <input type="text" [(ngModel)]="inventorModel" placeholder="enter inventor " class="form-control">
+    </div>
+    <hr>    
+    <div>
+        <input [(ngModel)]="yearModel" placeholder="year" class="form-control">
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="createInvention()"> create invention </button>
 </div>
-<label> {{ inventorModel }} </label>
-<div>
-    <input type="text" [(ngModel)]="inventorModel" placeholder="enter inventor ">
-</div>
-<label> {{ yearModel }} </label>
-<div>
-    <input [(ngModel)]="yearModel" placeholder="year">
-</div>
-
-<br>
-
-<button class="btn" (click)="createInvention()"> create invention </button>
